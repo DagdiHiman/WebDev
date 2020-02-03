@@ -1,0 +1,16 @@
+<html>
+
+<canvas id="myCanvas"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="blue";
+ctx.beginpath();
+ctx.arc(70,18,15,0,Math.PI*2,true);
+ctx.closepath();
+ctx.fill();
+</script>
+<body>
+<input type="button" onclick="draw();"/>
+</body>
+</html>

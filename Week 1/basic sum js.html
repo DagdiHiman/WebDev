@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<script type="text/javascript">
+		function showResult(){
+			x = parseInt(document.forms["myform"]["newinput"].value);
+			y = parseInt(document.forms["myform"]["newinput1"].value);
+			var sum;
+			sum = x+y;
+			document.forms["myform"]["result"].value=sum;
+		}
+	</script>
+	<body>
+		<form name="myform">
+			Enter a value : <input type="text" name="newinput" />
+			Enter a value : <input type="text" name="newinput1" />
+			<br> Sum =
+			<input type="button" value="Result"  onclick="showResult();" />
+			<output name="result"/>
+		</form>
+	</body>
+</html>
