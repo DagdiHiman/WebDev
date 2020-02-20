@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function dig_sum(n)  { 
+        var rem,sum=0;
+        while(n!=0){
+          rem = n%10;
+          sum += rem;
+          n = n/10;
+        }
+        
+        return(sum);
+      }
+    </script>
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+       let n = window.prompt("Enter a number =>");
+       res=dig_sum(n);
+       alert("SUM : "+Math.floor(res));
+    </script>
+  </body>
+</html>

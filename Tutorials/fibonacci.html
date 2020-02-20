@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    function Fib(){
+      this.rec_fibb = function(n) {
+        if(n <= 2) {
+            return 1;
+        } else {
+            return this.rec_fibb(n - 1) + this.rec_fibb(n - 2);
+        }
+      };
+      this.looping = function(n) {
+        var a=0, b=1, f=1;
+        for(var i=2; i<=n; i++){
+          f=a+b;
+          a=b;
+          b=f;
+        }
+        return f;
+      };
+    }
+    </script>
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+       let n = window.prompt("Enter a number =>");
+       var f = new Fib();
+       let res = "";
+       for(var i=1; i<=n; i++){
+         res += f.looping(i)+" ";
+       }
+       document.write("<h1 style='color:blue;'>FIBONACCI(I) </h1> <br><hr> ");
+       document.write("FIBONACCI SERIES : "+res);
+       console.log(res);
+       
+       res = "";
+       for(var i=1; i<=n; i++){
+         res += f.rec_fibb(i)+" ";
+       }
+       document.write("<h1 style='color:red;'>FIBONACCI(R) </h1> <br><hr> ");
+       document.write("FIBONACCI SERIES : "+res);
+       console.log(res);
+    </script>
+  </body>
+</html>
