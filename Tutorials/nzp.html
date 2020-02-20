@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function counter(ar)  { 
+         var num,array1=[0,0,0];
+         for (i=0;i<ar.length;i++)    {
+            switch (ar[i]<0)      {
+               case true : array1[0]++;break;
+               case false : 
+                              if (ar[i]==0) array1[1]++;
+                              else array1[2]++;
+                              break;
+               default : break;
+            }
+         }
+        return(array1);
+      }
+    </script>
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+       var ar1=[];
+       var ar=[-1,-2,-3,0,0,5,12,0,-10];
+      
+       //var ar = [];
+       //let n = window.prompt("Enter no. of Elements=>");
+       //for(var i=0; i<n; i++){
+       //  let num = window.prompt("Enter a number...");
+       //  ar[i] = num;
+       //}
+       
+       //ar1=counter(ar);
+       //alert("No. of Negative, Zero and Positive Elements are : "+ar1);
+      
+       let [negative,zero,positive] = counter([0,0,1,1,2,2]);
+       document.write("<h3 style='color:red;'>"+"Negative : "+negative+"<br>Zero : "+zero+"<br>Positive : "+positive+"</h3>");
+      
+    </script>
+  </body>
+</html>
