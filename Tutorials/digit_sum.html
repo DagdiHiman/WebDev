@@ -5,9 +5,11 @@
       function dig_sum(n)  { 
         var rem,sum=0;
         while(n!=0){
-          rem = n%10;
+          rem = parseInt(n%10);
+          console.log("Rem"+rem);
           sum += rem;
-          n = n/10;
+          console.log("Sum"+sum);
+          n = parseInt(n/10);
         }
         
         return(sum);
@@ -19,7 +21,9 @@
     <script type="text/javascript">
        let n = window.prompt("Enter a number =>");
        res=dig_sum(n);
-       alert("SUM : "+Math.floor(res));
+       alert("SUM : "+res);
+       document.write("SUM : "+ res);
+
     </script>
   </body>
 </html>
